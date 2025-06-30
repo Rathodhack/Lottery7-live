@@ -1,15 +1,23 @@
-function generatePrediction() {
-  const number = Math.floor(Math.random() * 10); // 0 to 9
-  const now = new Date().toLocaleTimeString();
-  const entry = `${now} → [ ${number} ]`;
+let countdown = 15;
+let timerEl = document.getElementById("timer");
+let numberEl = document.getElementById("number");
 
-  const div = document.getElementById("prediction");
-  const newLine = document.createElement("div");
-  newLine.innerText = entry;
-
-  div.prepend(newLine); // Latest prediction on top
+function getRandomPrediction() {
+  return Math.floor(Math.random() * 10);
 }
 
-// Run immediately and every 15 seconds
-generatePrediction();
-setInterval(generatePrediction, 15000);
+function updatePrediction() {
+  const newNumber = getRandomPrediction();
+  numberEl.textContent = newNumber;
+}
+
+setInterval(() => {
+  countdown--;
+  timerEl.textContent = countdown;
+  if (countdown === 0) {
+    updatePrediction();
+    countdown = 15;
+  }
+}, 1000);
+
+updatePrediction();

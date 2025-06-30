@@ -1,16 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Live Lottery7 Prediction</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lottery7 Live Prediction</title>
   <style>
-    body { font-family: sans-serif; padding: 20px; background-color: #f4f4f4; color: #333; }
-    h1 { color: #0077cc; }
-    #prediction { margin-top: 20px; font-size: 1.5rem; line-height: 2; }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #4caf50;
+    }
+    #number {
+      font-size: 4rem;
+      margin: 20px auto;
+      background-color: #1f1f1f;
+      padding: 30px;
+      border-radius: 20px;
+      width: 200px;
+      color: #f1f1f1;
+      box-shadow: 0 0 20px #4caf50;
+    }
+    #countdown {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #888;
+    }
   </style>
 </head>
 <body>
-  <h1>🎯 Live Lottery7 Prediction</h1>
-  <div id="prediction"></div>
+  <h1>🎯 Lottery7 Prediction</h1>
+  <div id="number">--</div>
+  <div id="countdown">Next update in <span id="timer">15</span>s</div>
+
+  <footer>Powered by Prediction AI • Updated every 15 sec</footer>
 
   <script src="script.js"></script>
 </body>
